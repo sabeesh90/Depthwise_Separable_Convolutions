@@ -108,7 +108,8 @@ Model 10 - This is the ideal model  <br>
 ![acc1](https://user-images.githubusercontent.com/48343095/123462870-7a028500-d608-11eb-81e2-e57bc5edaa1e.PNG) <br>
 10.	Highest Accuracy – 86.31 (316 epoch) <br>
 ![acc2](https://user-images.githubusercontent.com/48343095/123462924-85ee4700-d608-11eb-869b-7b91ebebc87c.PNG) <br>
-12.	 Receptive field calculation <br>
+12.	 Receptive field calculation  - Effective receptive field is 83.<br>
+![recp field calc](https://user-images.githubusercontent.com/48343095/123479519-ade8a500-d61e-11eb-8b88-7eceb688ecb1.PNG) <br>
 
 
 Model 11 <br>
