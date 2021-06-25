@@ -14,7 +14,7 @@ Model 2 <br>
 4.	3x3 convolution with stride 2 to replicate max pooling like layer. No 1x1 convolution in the max pooling like layer.
 5.	Normal sequential passing of layers. No specialized functions such as torch.add to concatenate layer outputs as there is no dilation. 
 6.	Highest Accuracy – 84.01 (100 epoch)
-7.	Target Accuracy – 84.01 (100epoch)
+7.	Target Accuracy – 84.01 (100epoch) <br>
 Model 3 <br>
 1.	Total 196,336 parameters
 2.	Three convolutional layer per block  - Total Four Convolutional blocks
@@ -22,7 +22,7 @@ Model 3 <br>
 4.	3x3 convolution with stride 2 , padding 2 and dilation 2 to replicate (dilation + maxpooling). No 1x1 convolution in max pooling like layer
 5.	Normal sequential passing of layers. 
 6.	Target Accuracy – 85.51(125 epoch)
-7.	Highest Accuracy – 86.32 (236)
+7.	Highest Accuracy – 86.32 (236) <br>
 Model 4 <br>
 1.	This is Similar to model 7 but without the dilation block. Total 147,616 parameters
 2.	Four Convolutional blocks – 2 layers per block
@@ -30,7 +30,7 @@ Model 4 <br>
 4.	3x3 convolution with stride 2 to replicate max pooling like layer. No 1x1 convolution in the max pooling like layer.
 5.	Normal sequential passing of layers. No specialized functions such as torch.add to concatenate layer outputs as there is no dilation. 
 6.	Model terminated at epoch 23 as there as no improvement. Highest Accuracy – 75.71 (21 epoch)
-7.	Target Accuracy – 75.71 (21 epoch)
+7.	Target Accuracy – 75.71 (21 epoch) <br>
 Model 5 <br>
 1.	This is Similar to model 7 but without the dilation block. Total 147,616 parameters
 2.	Four Convolutional blocks - 2 layers per block
