@@ -1,4 +1,6 @@
-# EVA6_S7 Assignment
+# EVA6_S7 Assignment 
+
+Bharath Kumar Bolla, Dinesh, Manu, Sabeesh
 
 ASSIGNMENT <br>
 12 different models were built and executed using various model architectures. The following is the architecture of the models experimented upon. 
