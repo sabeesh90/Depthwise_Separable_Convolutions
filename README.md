@@ -27,7 +27,9 @@ Model 3 <br>
 5.	Normal sequential passing of layers. 
 6.	Target Accuracy – 85.51(125 epoch)
 7.	Highest Accuracy – 86.32 (236) <br>
+
 Model 4 <br>
+
 1.	This is Similar to model 7 but without the dilation block. Total 147,616 parameters
 2.	Four Convolutional blocks – 2 layers per block
 3.	No separate dilation layer.
@@ -35,56 +37,68 @@ Model 4 <br>
 5.	Normal sequential passing of layers. No specialized functions such as torch.add to concatenate layer outputs as there is no dilation. 
 6.	Model terminated at epoch 23 as there as no improvement. Highest Accuracy – 75.71 (21 epoch)
 7.	Target Accuracy – 75.71 (21 epoch) <br>
+
 Model 5 <br>
+
 1.	This is Similar to model 7 but without the dilation block. Total 147,616 parameters
 2.	Four Convolutional blocks - 2 layers per block
 3.	No separate dilation layer.
 4.	3x3 convolution with stride 2 to replicate max pooling like layer. 1x1 convolution is introduced for the first time in the max pooling like layer.
 5.	Normal sequential passing of layers. No specialized functions such as torch.add to concatenate layer outputs as there is no dilation. 
 6.	Target Accuracy – 85.19(166epoch)
-7.	Highest Accuracy – 85.82(201)
+7.	Highest Accuracy – 85.82(201) <br>
+
 Model 6 <br>
+
 1.	Total 187,296 parameters
 2.	Four Convolutional blocks 2 layers per block
 3.	No separate dilation layer.
 4.	Pure dilation with different kernel sizes (k =10,5,3) in successive  blocks followed  - 1x1 convolution– max pool like layer
 5.	Normal sequential passing of layers. No specialized functions such as torch.add to concatenate layer outputs
 6.	Highest Accuracy – 77.96 (232 epoch)
-7.	Target Accuracy – 77.96 (232 epoch)
+7.	Target Accuracy – 77.96 (232 epoch) <br>
+
 Model 7 <br>
+
 1.	Total 153,104 parameters
 2.	Four Convolutional blocks 2 layers per block
 3.	Dilation layer in third block
 4.	No adding of features of dilation layer with normal layer in the third block
 5.	3x3 convolution with stride 2 to replicate max pooling like layer.
 6.	Target Accuracy – 84.50(248epoch)
-7.	Highest Accuracy – 84.50 (248 epoch). Non addition of layers in the dilation block does not result in improvement in performance.
+7.	Highest Accuracy – 84.50 (248 epoch). Non addition of layers in the dilation block does not result in improvement in performance.<br>
+
 Model 8 <br>
+
 1.	Total 153,104 parameters
 2.	Four Convolutional blocks2 layers per block
 3.	Dilation layer in third block
 4.	Torch. Add layers in the 1st, 2nd and 3rd conv block  - adding of two similar output layers before passing in to max pool like layer
 5.	3x3 convolution with stride 2  + 1x1 convolution block – max pool like layer
 6.	Target Accuracy – 85.08 (171 epoch)
-7.	Highest Accuracy – 85.40 (248 epoch)
+7.	Highest Accuracy – 85.40 (248 epoch) <br>
+
 Model 9 <br>
+
 1.	Total 197,888 parameters
 2.	Four Convolutional blocks
 3.	Dilation layer in second convolutional block
 4.	Torch. Add layers in the 2nd conv block - adding of two similar output layers before passing in to max pool like layer. 
 5.	Pure dilation layer (8,4,2) followed by 1x1 convolution– max pool like layer
-6.	There is no significant improvement in model accuracy (Static at 67% validation and 53% training – random model) on using pure dilation layers. Model fails in case of pure dilation layer. 
-Model 10 <br> - This is the ideal model
+6.	There is no significant improvement in model accuracy (Static at 67% validation and 53% training – random model) on using pure dilation layers. Model fails in case of pure dilation layer. <br>
+
+Model 10 - This is the ideal model  <br>
+
 1.	Total 153,104 parameters <br>
 ![model10 params](https://user-images.githubusercontent.com/48343095/123461785-204d8b00-d607-11eb-8c5b-2b651114d411.PNG) <br>
-2.	Four Convolutional blocks
+2.	Four Convolutional blocks <br>
 3.	Dilation layer in third block <br>
 ![dilation](https://user-images.githubusercontent.com/48343095/123462325-cef1cb80-d607-11eb-9631-1e251128aebd.PNG) <br>
 4.	Torch. Add layers in the third conv block <br>
 ![concat](https://user-images.githubusercontent.com/48343095/123462358-dadd8d80-d607-11eb-81c3-c3794ac1a87e.PNG) <br>
 5.	3x3 convolution stride 2 followed by 1x1 convolution– max pool like layer <br>
 ![maxpool](https://user-images.githubusercontent.com/48343095/123462387-e3ce5f00-d607-11eb-8971-e0229f57defb.PNG) <br>
-6. four depth wise convolutional layers
+6. four depth wise convolutional layers <br>
 ![depth2](https://user-images.githubusercontent.com/48343095/123462446-f8aaf280-d607-11eb-9de2-b0ed18ef7b5a.PNG) <br>
 ![depth3](https://user-images.githubusercontent.com/48343095/123462464-fe083d00-d607-11eb-8d1f-a660412f2002.PNG) <br>
 ![depth4](https://user-images.githubusercontent.com/48343095/123462480-02ccf100-d608-11eb-9c25-1c6af93d6d90.PNG) <br>
@@ -92,18 +106,21 @@ Model 10 <br> - This is the ideal model
 ![acc1](https://user-images.githubusercontent.com/48343095/123462870-7a028500-d608-11eb-81e2-e57bc5edaa1e.PNG) <br>
 10.	Highest Accuracy – 86.31 (316 epoch) <br>
 ![acc2](https://user-images.githubusercontent.com/48343095/123462924-85ee4700-d608-11eb-869b-7b91ebebc87c.PNG) <br>
-12.	 Receptive field calculation
+12.	 Receptive field calculation <br>
 
 
 Model 11 <br>
+
 1.	Total 153,104 parameters
 2.	Four Convolutional blocks
 3.	Dilation layer in third block
 4.	Torch. Add layers in the 1st, 2nd and 3rd conv block - adding of two similar output layers before passing into max pool like layer
 5.	3x3 convolution with stride 2 followed by 1x1 convolution– max pool like layer
 6.	Target Accuracy – 85.08 (171 epoch)
-7.	Highest Accuracy – 85.40 (248 epoch).Accuracy is the same as addition of features of just the dilation block. No contribution of normal layer feature addition.
+7.	Highest Accuracy – 85.40 (248 epoch).Accuracy is the same as addition of features of just the dilation block. No contribution of normal layer feature addition. <br>
+
 Model 12 <br>
+
 1.	Total 99,936 parameters
 2.	Four convolutions block
 3.	Dilation layer in the third block
@@ -111,7 +128,7 @@ Model 12 <br>
 5.	3x3 convolution - followed by 1x1 convolution in stride 2 – max pool like layer
 6.	All the layers have depth wise convolution
 7.	Target Accuracy – 82.98 (249 epoch)
-8.	Highest Accuracy – 82.98 (249 epoch). No significant improvement while using multiplicative features of dilation and non-dilation layers.
+8.	Highest Accuracy – 82.98 (249 epoch). No significant improvement while using multiplicative features of dilation and non-dilation layers. <br>
 
 Analysis and Findings of the architecture <br>
 
