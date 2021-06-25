@@ -7,7 +7,9 @@ The following were the augmentations used in the code <br>
 ![augmentations](https://user-images.githubusercontent.com/48343095/123461407-b92fd680-d606-11eb-9876-af4b7511b81f.PNG) <br>
 
 Model 1 – Base model for architecture tuning <br>
+
 Model 2 <br>
+
 1.	There is no dilation block. Total 147,616 parameters
 2.	Four Convolutional blocks – 2 layers per block
 3.	No separate dilation layer.
@@ -15,7 +17,9 @@ Model 2 <br>
 5.	Normal sequential passing of layers. No specialized functions such as torch.add to concatenate layer outputs as there is no dilation. 
 6.	Highest Accuracy – 84.01 (100 epoch)
 7.	Target Accuracy – 84.01 (100epoch) <br>
+
 Model 3 <br>
+
 1.	Total 196,336 parameters
 2.	Three convolutional layer per block  - Total Four Convolutional blocks
 3.	No separate dilation layer.
